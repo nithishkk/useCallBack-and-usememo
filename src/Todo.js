@@ -12,4 +12,4 @@ const Todo=({todos,addTodo})=>{
   )
 }
 
-export default Todo
+export default React.memo(Todo)

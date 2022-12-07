@@ -1,6 +1,6 @@
 import React from "react";
 import Titel from './Titel'
-import {Button} from './Button'
+import Button from './Button'
 import CounterHook from './CountrHook'
 import Todo from './Todo'
 import "./style.css";
@@ -8,12 +8,12 @@ import "./style.css";
 export default function App() {
   const[count,setCount]=React.useState(0);
   const[todos,setTodos]=React.useState([])
-  const handleIncrement=()=>{
+  const handleIncrement=React.useCallback(()=>{
     setCount((count)=>count+1)
-  }
-  const addTodo=()=>{
+  },[count])
+  const addTodo=React.useCallback(()=>{
     setTodos((t)=>[...t, "New Todo Item"]);
-  }
+  },[todos])
   return (
     <div>
       <Titel/>

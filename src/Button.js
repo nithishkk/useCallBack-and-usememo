@@ -1,6 +1,6 @@
 import React from "react"
 
-export const Button=({handleIncrement})=>{
+ const Button=({handleIncrement})=>{
   console.log("button is rendring")
   return (
     <div>
@@ -8,3 +8,4 @@ export const Button=({handleIncrement})=>{
       </div>
   )
 }
+export default React.memo(Button)

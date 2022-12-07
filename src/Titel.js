@@ -8,5 +8,5 @@ const Titel = () => {
     </div>
   );
 };
-export default Titel;
-// export default React.memo(Titel);
+// export default Titel;
+export default React.memo(Titel);

@@ -8,4 +8,4 @@ function CounterHook ({Count}){
       </div>
   )
 }
-export default CounterHook;
+export default React.memo(CounterHook);
